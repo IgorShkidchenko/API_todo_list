@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "relationships": {
+      "type": "object",
+      "properties": {
+        "tasks": {
+          "type": "object"
+        },
+        "user": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "tasks",
+        "user"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "attributes",
+    "relationships",
+    "id",
+    "type"
+  ]
+}

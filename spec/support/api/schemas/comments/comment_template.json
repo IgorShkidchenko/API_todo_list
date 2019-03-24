@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "body": {
+          "type": "string"
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "null"
+            },
+            "thumb": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "url"
+              ]
+            }
+          },
+          "required": [
+            "url",
+            "thumb"
+          ]
+        }
+      },
+      "required": [
+        "body",
+        "image"
+      ]
+    },
+    "relationships": {
+      "type": "object",
+      "properties": {
+        "task": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type"
+              ]
+            }
+          },
+          "required": [
+            "data"
+          ]
+        }
+      },
+      "required": [
+        "task"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "attributes",
+    "relationships"
+  ]
+}
