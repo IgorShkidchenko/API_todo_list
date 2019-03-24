@@ -6,3 +6,6 @@ en:
   task:
     errors:
       past_deadline: "can't be in the past!"
+  user:
+    errors:
+      email: Email invalid

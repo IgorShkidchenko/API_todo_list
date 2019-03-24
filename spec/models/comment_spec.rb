@@ -14,8 +14,8 @@ RSpec.describe Comment, type: :model do
   end
 
   context 'with validations' do
-    let(:min_length) { Comment::VALID_LENGTH_RANGE.min }
-    let(:max_length) { Comment::VALID_LENGTH_RANGE.max }
+    let(:min_length) { Comment::VALID_BODY_LENGTH_RANGE.min }
+    let(:max_length) { Comment::VALID_BODY_LENGTH_RANGE.max }
 
     it { is_expected.to validate_presence_of(:body) }
     it { is_expected.to validate_length_of(:body).is_at_least(min_length).is_at_most(max_length) }
