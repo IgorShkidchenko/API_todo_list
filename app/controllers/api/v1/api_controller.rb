@@ -1,10 +1,9 @@
 module Api
   module V1
     class ApiController < ApplicationController
-      include JWTSessions::RailsAuthorization
       include Pundit
+      include JWTSessions::RailsAuthorization
       include Concerns::ExceptionsHandler
-      include Concerns::ResourceLoaderAndAuthorizer
 
       private
 

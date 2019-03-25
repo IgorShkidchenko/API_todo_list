@@ -1,6 +1,8 @@
 module Api
   module V1
     class CommentsController < ApiController
+      include Concerns::ResourceLoaderAndAuthorizer
+
       before_action :authorize_access_request!
       before_action :load_and_authorize_resource, only: :destroy
 
