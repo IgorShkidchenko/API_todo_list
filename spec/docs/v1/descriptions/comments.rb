@@ -24,7 +24,7 @@ module Docs
           verb 'POST'
           params task_id: { type: :integer, required: :required, value: 1 },
                  body: { type: :string, required: :required, value: 'New_comment_body' },
-                 image: { type: :string, value: 'https://account.s3.us-east-2.amazonaws.com/uploads/image.jpg' }
+                 image: { type: :string, value: '/uploads/image.jpg' }
         end
       end
 
