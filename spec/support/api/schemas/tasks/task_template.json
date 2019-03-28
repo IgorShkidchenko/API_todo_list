@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "comments_count": {
+          "type": "integer"
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "deadline": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "position": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "comments_count",
+        "complete",
+        "deadline",
+        "name",
+        "position"
+      ]
+    },
+    "relationships": {
+      "type": "object",
+      "properties": {
+        "comments": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "comments"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "attributes",
+    "relationships",
+    "id",
+    "type"
+  ]
+}
