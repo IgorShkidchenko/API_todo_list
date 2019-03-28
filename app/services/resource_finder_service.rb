@@ -1,6 +1,4 @@
 class ResourceFinderService < ApplicationService
-  CONTROLLER_NAME_LAST_CHAR = 's'.freeze
-
   attr_reader :name, :record
 
   def initialize(controller_name, params)
@@ -17,7 +15,7 @@ class ResourceFinderService < ApplicationService
   private
 
   def parsed_controller_name
-    @controller_name.chomp(CONTROLLER_NAME_LAST_CHAR)
+    @controller_name.classify.downcase
   end
 
   def finded_record
